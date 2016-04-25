@@ -11,12 +11,8 @@
     "128": "media/icon128.png",
     "256": "media/icon256.png"
   },
-  "default_locale": "en",
 
   "minimum_chrome_version": "5.0.316.0",
-  "background": {
-    "scripts": []
-  },
   "content_scripts": [{
     "js": ["scripts/ishrink.js"],
     "matches": [
