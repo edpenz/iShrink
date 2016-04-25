@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "__MSG_extension_name__",
-  "version": "0.9.11",
+  "name": "iShrink",
+  "version": "0.1",
 
-  "description": "__MSG_extension_description__",
+  "description": "Chrome extension that automatically changes zoom level to fit content width",
   "icons": {
     "16": "media/icon16.png",
     "32": "media/icon32.png",
@@ -13,26 +13,16 @@
   },
   "default_locale": "en",
 
-  "browser_action": {
-    "default_icon": "media/icon128.png",
-    "default_title": "__MSG_browserActions_tooltip__",
-    "default_popup": "html/popup.html"
-  },
-
   "minimum_chrome_version": "5.0.316.0",
   "background": {
-    "scripts": ["scripts/uri.js", "scripts/options.js", "scripts/background.js"]
+    "scripts": []
   },
-  "options_page": "html/options.html",
   "content_scripts": [{
-    "js": ["scripts/izoom.js"],
+    "js": ["scripts/ishrink.js"],
     "matches": [
       "http://*/*",
       "https://*/*"
     ],
     "run_at": "document_start"
-  }],
-  "permissions": [
-    "contextMenus"
-  ]
+  }]
 }
